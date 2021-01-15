@@ -14,18 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from homepage import views as homepage
-from gradient_descent import views as gradient_descent
-from dichotomy import views as dichotomy
-from chord_method import views as chord_method
-from jacobi_method import views as jacobi_method
+from django.urls import path, include
 
 urlpatterns = [
-    path('', homepage.index),
-    path('gradient_descent/', gradient_descent.index),
-    path('dichotomy/', dichotomy.index),
-    path('chord_method/', chord_method.index),
-    path('jacobi_method/', jacobi_method.index),
+    path('', include('homepage.urls')),
+    path('gradient_descent/', include('gradient_descent.urls')),
+    path('dichotomy/', include('dichotomy.urls')),
+    path('chord_method/', include('chord_method.urls')),
+    path('jacobi_method/', include('jacobi_method.urls')),
 ]

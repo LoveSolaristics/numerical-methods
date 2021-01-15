@@ -1,7 +1,6 @@
 from django.urls import path
-import views
+import gradient_descent.views
 
 urlpatterns = [
-    path('', views.index),
-    # path('<int:number>/', views.index_task)
+    path('', gradient_descent.views.index),
 ]

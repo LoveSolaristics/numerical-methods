@@ -1,6 +1,6 @@
 from django.urls import path
-import views
+import dichotomy.views
 
 urlpatterns = [
-    path('', views.index),
+    path('', dichotomy.views.index),
 ]

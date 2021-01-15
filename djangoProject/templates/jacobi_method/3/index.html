@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Метод Якоби</title>
+    <title>3 уравнения</title>
     <link rel="icon" type="image/png" href="https://img2.freepng.ru/20180612/ewe/kisspng-square-root-mathematics-plus-and-minus-signs-squar-beer-bottle-cap-5b1fee944867d1.1746039015288193482966.jpg" />
     {% load static %}
-    <link rel="stylesheet" href="{% static '/solution.css' %}">
+    <link rel="stylesheet" href="{% static 'jacobi_method/3/index.css' %}">
 </head>
 <body>
 <h1><a href="/">Главная</a> - Метод Якоби для решения СЛАУ</h1>
 
-<p>Сколько уравнений в системе?</p>
-<ul>
-    <li><a href="./2">Два уравнения</a></li>
-    <li><a href="./3">Три уравнения</a></li>
-    <li><a href="./4">Четыре уравнения</a></li>
-</ul>
+<form class='task' action="" method="post">
+    {% csrf_token %}
+    <p>Коэффициенты:</p>
+
+    {{ form }}
+
+
+
+    <input class='button_submit' type="submit" value="Решить" />
+</form>
+
+<div class="solution">
+    {{ solution_text|safe|linebreaks }}
+</div>
 </body>
 </html>

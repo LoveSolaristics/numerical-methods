@@ -1,6 +1,6 @@
 from django.urls import path
-import views
+import chord_method.views
 
 urlpatterns = [
-    path('', views.index),
+    path('', chord_method.views.index),
 ]
