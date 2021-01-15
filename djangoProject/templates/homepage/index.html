@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-калькуляторы</title>
+    <link rel="icon" type="image/png" href="https://img2.freepng.ru/20180612/ewe/kisspng-square-root-mathematics-plus-and-minus-signs-squar-beer-bottle-cap-5b1fee944867d1.1746039015288193482966.jpg" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homepage/index.css' %}">
+</head>
+<body>
+<h1>Онлайн-калькуляторы</h1>
+<h2>Решение систем линейных уравнений</h2>
+<ul>
+    <li>
+        <a href="/jacobi_method">Метод Якоби</a>
+    </li>
+</ul>
+<h2>Решение нелинейных уравнений</h2>
+<ul>
+    <li>
+        <a href="/dichotomy">Метод половинного деления (дихотомии)</a>
+    </li>
+    <li>
+        <a href="/chord_method" disabled="">Метод хорд</a>
+    </li>
+</ul>
+<h2>Решение систем нелинейных уравнений</h2>
+<ul>
+    <li>
+        <a href="/gradient_descent">Градиентный спуск</a>
+    </li>
+</ul>
+
+
+</body>
+</html>

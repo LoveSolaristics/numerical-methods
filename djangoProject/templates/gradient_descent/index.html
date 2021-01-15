@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Градиентный спуск</title>
+    <link rel="icon" type="image/png" href="https://img2.freepng.ru/20180612/ewe/kisspng-square-root-mathematics-plus-and-minus-signs-squar-beer-bottle-cap-5b1fee944867d1.1746039015288193482966.jpg" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'solutions.css' %}">
+    <script>
+        function addNewEquation() {
+            let equations = document.querySelector('.equations');
+            equations.innerHTML = equations.innerHTML + '<label class="equation__label"><input type="text" class="equation__label__input" placeholder="Уравнение"></label>';
+
+        }
+    </script>
+</head>
+<body>
+<h1><a href="/">Главная</a> - Метод градиентного спуска решения систем нелинейных уравнений</h1>
+<form class='task' action="" method="post">
+    {% csrf_token %}
+    <p>Уравнения:</p>
+    {{ form }}
+
+    <input class='button_submit' type="submit" value="Решить" />
+</form>
+
+<div class="solution">
+    {{ solution_text }}
+</div>
+</body>
+</html>

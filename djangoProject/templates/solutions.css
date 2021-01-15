@@ -1,0 +1,64 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 50px auto;
+
+    font-family: 'Cambria Math', monospace;
+    font-size: 25px;
+}
+
+label {
+    margin: 10px;
+}
+
+input {
+    width: 90%;
+    margin: 10px;
+    min-height: 50px;
+
+    font-family: 'Cambria Math', monospace;
+    font-size: 25px;
+}
+
+select {
+    width: 90%;
+    margin: 10px;
+    min-height: 50px;
+
+    font-family: 'Cambria Math', monospace;
+    font-size: 25px;
+}
+
+.button_submit {
+    max-width: 200px;
+    min-height: 50px;
+    font-family: 'Cambria Math', monospace;
+    font-size: 25px;
+
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.solution {
+    font-family: 'Cambria Math', monospace;
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+
+    border: 2px solid darkred;
+    border-radius: 50px;
+}
+
+.errorlist {
+    display: none;
+}
+
+img{
+    min-height: 480px;
+    max-width: 640px;
+}
