@@ -27,6 +27,7 @@ jobs:
         pip install django
         pip install numpy
         pip install sympy
+        pip install matplotlib
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
