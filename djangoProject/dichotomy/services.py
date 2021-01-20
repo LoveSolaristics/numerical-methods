@@ -3,7 +3,7 @@ from math import log, log10, e, tan, sin, cos
 from decimal import Decimal, ROUND_05UP
 import matplotlib.pyplot as plt
 
-
+# неиспользуемая функция для построения графика
 def figure_png(function, left_border, right_border):
     x = np.linspace(left_border, right_border, 1000)
     fig, ax = plt.subplots()
@@ -21,8 +21,9 @@ def normalization_str(string):
 
 def dichotomy_solution(f, error=10 ** (-3), method_error=1, left_border=-100, right_border=100,
                        details=False):
-    function = lambda x: eval(normalization_str(f))
-    figure_png(function, left_border, right_border)
+    f = normalization_str(f)
+    function = lambda x: eval(f)
+    # figure_png(function, left_border, right_border)
 
     round_number = -int(log10(error))
 
